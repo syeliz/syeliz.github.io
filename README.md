@@ -1,2 +1,1 @@
-Yeliz Kurt
-BLM3006.2 Web Programlama
+yeliz.github.io
