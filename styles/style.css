@@ -1,1 +1,100 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
+body {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+nav {
+    background-color: #d8dff0;
+    text-align: right;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    /*transition: 0.3s;  Hover efekti için geçiş */
+}
+
+nav ul li a:hover {
+    color: #5c7cfa;
+    background-color: #e9ecef;
+    border-radius: 4px;
+}
+
+.active {
+    background-color: #8da2e0;
+    color: white !important;
+    border-radius: 4px;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+main {
+    display: block;
+    overflow: hidden;
+}
+
+.icerik, .yan-menu {
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.icerik {
+    width: 65%;
+    float: left;
+    background-color: #fff8e1;
+    border-color: #ffe082;
+}
+
+.yan-menu {
+    width: 33%;
+    float: right;
+    background-color: #e3f2fd;
+    border-color: #bbdefb;
+}
+
+main p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    clear: both;
+    font-size: 14px;
+}
