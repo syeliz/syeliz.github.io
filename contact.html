@@ -2,58 +2,112 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İletişim Formu</title>
-    <style>        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Sayfası</title>
+    <style>
+        /* CSS Tarafı (Box Model Kullanımı) */
+        
         .contact-container {
+            /* [cite: 14] Sayfayı ortalama ve genişlik ayarı */
             width: 600px;
             margin: 40px auto;
             
-            padding: 25px;
-            border: 2px solid #ccc;
+            /* [cite: 15, 16] İç boşluk, kenarlık ve köşe yuvarlama */
+            padding: 30px;
+            border: 1px solid #e0e0e0;
             border-radius: 12px;
             
-            font-family: sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .contact-container h2 {
             text-align: center;
             color: #333;
+            margin-bottom: 30px;
         }
 
         .contact-container label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #444;
         }
 
+        /* [cite: 17, 18, 19, 20, 22] Çoklu seçicilerle form elemanları tasarımı */
         input[type="text"], 
         input[type="email"], 
+        input[type="password"],
         select, 
         textarea {
-            width: 100%; 
-            padding: 10px;
-            margin-bottom: 20px;
+            width: 100%; /* [cite: 18] */
+            padding: 12px; /* [cite: 19] */
+            margin-bottom: 20px; /* [cite: 20] */
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 6px;
             box-sizing: border-box;
+            font-size: 14px;
         }
 
+        /* Radyo butonları ve Checkboxlar için özel alan (Görseldeki gri kutular) */
+        .option-group {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .option-item input {
+            margin-right: 10px;
+            width: auto;
+        }
+
+        /* Buton Grubu Konteynırı */
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* [cite: 21] Gönder Butonu Tasarımı */
         .submit-btn {
-            background-color: #007bff; 
+            background-color: #007bff;
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 12px 0;
             font-size: 16px;
             font-weight: bold;
             border-radius: 6px;
             cursor: pointer;
-            width: 100%;
+            flex: 1; /* Genişliği eşit paylaştırır */
+            transition: background 0.3s;
         }
 
-        .submit-btn:hover {
-            background-color: #0056b3;
+        /* Temizle Butonu Tasarımı */
+        .reset-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            flex: 1;
+            transition: background 0.3s;
         }
+
+        .submit-btn:hover { background-color: #0056b3; }
+        .reset-btn:hover { background-color: #a71d2a; }
+
     </style>
 </head>
 <body>
@@ -61,25 +115,51 @@
     <div class="contact-container">
         <h2>Detaylı İletişim Formu</h2>
         
-        <form action="#" method="post">
+        <form action="#">
             <label for="ad-soyad">Ad Soyad:</label>
-            <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: John Doe" required>
+            <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş">
 
             <label for="email">E-posta Adresi:</label>
-            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+            <input type="email" id="email" placeholder="ornek@mail.com">
+
+            <label for="sifre">Başvuru Takip Şifresi:</label>
+            <input type="password" id="sifre" placeholder="Şifrenizi girin">
+
+            <label>İletişim Tercihi:</label>
+            <div class="option-group">
+                <label class="option-item">
+                    <input type="radio" name="tercih" value="eposta"> Bana e-posta ile ulaşın
+                </label>
+                <label class="option-item">
+                    <input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın
+                </label>
+            </div>
+
+            <label>İlgi Alanları / Yetenekler:</label>
+            <div class="option-group">
+                <label class="option-item"><input type="checkbox" name="skill" value="html"> HTML</label>
+                <label class="option-item"><input type="checkbox" name="skill" value="css"> CSS</label>
+                <label class="option-item"><input type="checkbox" name="skill" value="algoritma"> Algoritma</label>
+            </div>
 
             <label for="konu">Konu:</label>
-            <select id="konu" name="konu" required>
+            <select id="konu">
                 <option value="" disabled selected>Lütfen bir konu seçin...</option>
-                <option value="is-teklifi">İş Teklifi</option>
+                <option value="is">İş Teklifi</option>
                 <option value="soru">Soru</option>
-                <option value="geri-bildirim">Geri Bildirim</option>
+                <option value="feedback">Geri Bildirim</option>
             </select>
 
-            <label for="mesaj">Mesajınız:</label>
-            <textarea id="mesaj" name="mesaj" rows="4" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+            <input type="file" id="file" style="margin-bottom: 20px;">
 
-            <button type="submit" class="submit-btn">Gönder</button>
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" rows="4" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Gönder</button>
+                <button type="reset" class="reset-btn">Temizle</button>
+            </div>
         </form>
     </div>
 
