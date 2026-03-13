@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim Sayfası</title>
-    <style>
-        /* CSS Tarafı (Box Model Kullanımı) */
-        
+    <style>        
         .contact-container {
-            /* [cite: 14] Sayfayı ortalama ve genişlik ayarı */
             width: 600px;
             margin: 40px auto;
             
-            /* [cite: 15, 16] İç boşluk, kenarlık ve köşe yuvarlama */
             padding: 30px;
             border: 1px solid #e0e0e0;
             border-radius: 12px;
@@ -35,22 +31,20 @@
             color: #444;
         }
 
-        /* [cite: 17, 18, 19, 20, 22] Çoklu seçicilerle form elemanları tasarımı */
         input[type="text"], 
         input[type="email"], 
         input[type="password"],
         select, 
         textarea {
-            width: 100%; /* [cite: 18] */
-            padding: 12px; /* [cite: 19] */
-            margin-bottom: 20px; /* [cite: 20] */
+            width: 100%;
+            padding: 12px; 
+            margin-bottom: 20px; 
             border: 1px solid #ccc;
             border-radius: 6px;
             box-sizing: border-box;
             font-size: 14px;
         }
 
-        /* Radyo butonları ve Checkboxlar için özel alan (Görseldeki gri kutular) */
         .option-group {
             background-color: #f8f9fa;
             padding: 15px;
@@ -71,15 +65,13 @@
             width: auto;
         }
 
-        /* Buton Grubu Konteynırı */
         .button-group {
             display: flex;
             gap: 15px;
         }
 
-        /* [cite: 21] Gönder Butonu Tasarımı */
         .submit-btn {
-            background-color: #007bff;
+            background-color: #0339fc;
             color: white;
             border: none;
             padding: 12px 0;
@@ -87,13 +79,12 @@
             font-weight: bold;
             border-radius: 6px;
             cursor: pointer;
-            flex: 1; /* Genişliği eşit paylaştırır */
+            flex: 1;
             transition: background 0.3s;
         }
 
-        /* Temizle Butonu Tasarımı */
         .reset-btn {
-            background-color: #dc3545;
+            background-color: #fc032c;
             color: white;
             border: none;
             padding: 12px 0;
@@ -117,21 +108,21 @@
         
         <form action="#">
             <label for="ad-soyad">Ad Soyad:</label>
-            <input type="text" id="ad-soyad" placeholder="Örn: Asaf Karataş">
+            <input type="text" id="ad-soyad" placeholder="Örn: John Doe">
 
             <label for="email">E-posta Adresi:</label>
             <input type="email" id="email" placeholder="ornek@mail.com">
 
-            <label for="sifre">Başvuru Takip Şifresi:</label>
-            <input type="password" id="sifre" placeholder="Şifrenizi girin">
+            <label for="sifre">Başvuru Şifresi:</label>
+            <input type="password" id="sifre" placeholder="Şifrenizi girin.">
 
             <label>İletişim Tercihi:</label>
             <div class="option-group">
                 <label class="option-item">
-                    <input type="radio" name="tercih" value="eposta"> Bana e-posta ile ulaşın
+                    <input type="radio" name="tercih" value="eposta"> Bana e-posta ile ulaşın.
                 </label>
                 <label class="option-item">
-                    <input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın
+                    <input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın.
                 </label>
             </div>
 
@@ -140,6 +131,9 @@
                 <label class="option-item"><input type="checkbox" name="skill" value="html"> HTML</label>
                 <label class="option-item"><input type="checkbox" name="skill" value="css"> CSS</label>
                 <label class="option-item"><input type="checkbox" name="skill" value="algoritma"> Algoritma</label>
+                <label class="option-item"><input type="checkbox" name="skill" value="jss"> JavaScript</label>
+                <label class="option-item"><input type="checkbox" name="skill" value="ai"> Yapay Zeka</label>
+
             </div>
 
             <label for="konu">Konu:</label>
@@ -147,6 +141,8 @@
                 <option value="" disabled selected>Lütfen bir konu seçin...</option>
                 <option value="is">İş Teklifi</option>
                 <option value="soru">Soru</option>
+                <option value="oneri">Öneri</option>
+                <option value="sikayet">Şikayet</option>
                 <option value="feedback">Geri Bildirim</option>
             </select>
 
@@ -154,7 +150,7 @@
             <input type="file" id="file" style="margin-bottom: 20px;">
 
             <label for="mesaj">Mesajınız:</label>
-            <textarea id="mesaj" rows="4" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            <textarea id="mesaj" rows="4" placeholder="Detaylı mesajınızı buraya yazabilirsiniz."></textarea>
 
             <div class="button-group">
                 <button type="submit" class="submit-btn">Gönder</button>
