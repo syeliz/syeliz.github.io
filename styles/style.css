@@ -2,22 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    display: flex; [cite: 11]
+    flex-direction: column; [cite: 11, 50]
+    height: 100vh; [cite: 9, 46, 52]
+    width: 100%;
 }
 
 .navbar {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 10vh; [cite: 15]
+    display: flex; [cite: 47]
+    justify-content: space-between; [cite: 17, 48]
+    align-items: center; [cite: 18, 49]
     padding: 0 20px;
-    background-color: #f8f9fa;
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
 
@@ -28,70 +33,80 @@
 }
 
 .hero {
-    height: 30vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
+    height: 30vh; [cite: 20]
+    display: flex; [cite: 47]
+    flex-direction: row; [cite: 23, 50]
+    justify-content: space-between; [cite: 24]
+    align-items: stretch; [cite: 25]
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #ddd;
 }
 
-.hero-content {
-    flex: 1;
-}
-
-.hero-image {
-    flex: 1;
-    background-color: #e9ecef;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px dashed #ccc;
+.hero-image-placeholder {
+    width: 40%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
 }
 
 .cards-section {
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    height: 30vh; [cite: 27]
+    display: flex; [cite: 30]
+    flex-wrap: wrap; [cite: 28, 31]
+    gap: 10px; [cite: 32]
     padding: 10px;
-    background-color: #f1f3f5;
+    background-color: #fff;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
 }
 
 .card {
-    flex: 1 0 30%;
-    background-color: white;
-    border: 1px solid #dee2e6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    flex: 1 1 calc(16.66% - 10px); 
+    min-width: 120px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
 }
 
 .flex-grow-section {
-    height: 20vh;
-    display: flex;
-    align-items: stretch;
+    height: 20vh; [cite: 34]
+    display: flex; [cite: 47]
+    align-items: stretch; [cite: 39]
     gap: 10px;
     padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
 }
 
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
 }
 
-.box1 { flex-grow: 1; background-color: #74c0fc; }
-.box2 { flex-grow: 2; background-color: #8ce99a; }
-.box3 { flex-grow: 1; background-color: #ffc9c9; }
+.box1 { flex-grow: 1; background-color: #d1e7ff; } [cite: 36, 51]
+.box2 { flex-grow: 2; background-color: #d4edda; } [cite: 37, 51]
+.box3 { flex-grow: 1; background-color: #fff3cd; } [cite: 38, 51]
 
 .footer {
-    height: 10vh;
+    height: 10vh; [cite: 41]
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #343a40;
+    justify-content: center; [cite: 43]
+    align-items: center; [cite: 44]
+    background-color: #eee;
+    margin-top: auto;
+}
+
+button {
+    background-color: #72a1e5;
+    border: none;
     color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 5px;
 }
