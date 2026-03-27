@@ -2,111 +2,149 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: sans-serif;
 }
 
 .wrapper {
-    display: flex; [cite: 11]
-    flex-direction: column; [cite: 11, 50]
-    height: 100vh; [cite: 9, 46, 52]
-    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    height: 100vh; 
+    background-color: #f5f5f5;
+    padding: 10px;
+    gap: 10px;
 }
 
 .navbar {
-    height: 10vh; [cite: 15]
-    display: flex; [cite: 47]
-    justify-content: space-between; [cite: 17, 48]
-    align-items: center; [cite: 18, 49]
-    padding: 0 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    height: 10vh; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background: #fff;
+    padding: 0 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 20px;
+    color: #555;
 }
 
 .hero {
-    height: 30vh; [cite: 20]
-    display: flex; [cite: 47]
-    flex-direction: row; [cite: 23, 50]
-    justify-content: space-between; [cite: 24]
-    align-items: stretch; [cite: 25]
+    height: 30vh; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    background: #fff;
     padding: 20px;
-    background-color: #fff;
-    margin: 10px;
-    border: 1px solid #ddd;
-}
-
-.hero-image-placeholder {
-    width: 40%;
-    background-color: #e0e0e0;
     border-radius: 8px;
+    border: 1px solid #ddd;
 }
 
-.cards-section {
-    height: 30vh; [cite: 27]
-    display: flex; [cite: 30]
-    flex-wrap: wrap; [cite: 28, 31]
-    gap: 10px; [cite: 32]
-    padding: 10px;
-    background-color: #fff;
-    margin: 0 10px;
+.hero-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-image {
+    flex: 1;
+    background: #e9e9e9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.cards-container {
+    height: 30vh; 
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; 
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
     border: 1px solid #ddd;
-    overflow-y: auto;
 }
 
 .card {
-    flex: 1 1 calc(16.66% - 10px); 
-    min-width: 120px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
+    flex: 1 1 calc(16% - 15px); 
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    padding: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
 }
 
-.flex-grow-section {
-    height: 20vh; [cite: 34]
-    display: flex; [cite: 47]
-    align-items: stretch; [cite: 39]
-    gap: 10px;
-    padding: 10px;
-    margin: 10px;
-    background-color: #fff;
+.flex-grow-area {
+    height: 20vh; 
+    display: flex;
+    gap: 15px;
+    align-items: stretch; 
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
     border: 1px solid #ddd;
 }
 
-.box {
-    padding: 15px;
-    text-align: center;
-    border-radius: 5px;
+.grow-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px;
 }
 
-.box1 { flex-grow: 1; background-color: #d1e7ff; } [cite: 36, 51]
-.box2 { flex-grow: 2; background-color: #d4edda; } [cite: 37, 51]
-.box3 { flex-grow: 1; background-color: #fff3cd; } [cite: 38, 51]
+.box-blue { flex-grow: 1; background: #dce9f9; } 
+.box-green { flex-grow: 2; background: #e2f0d9; } 
+.box-orange { flex-grow: 1; background: #fbe5d6; } 
 
 .footer {
-    height: 10vh; [cite: 41]
+    height: 10vh; 
     display: flex;
-    justify-content: center; [cite: 43]
-    align-items: center; [cite: 44]
-    background-color: #eee;
-    margin-top: auto;
+    justify-content: center; 
+    align-items: center; 
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    color: #666;
 }
 
 button {
-    background-color: #72a1e5;
     border: none;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
+    padding: 8px 20px;
     border-radius: 4px;
-    margin-top: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-blue { background: #84a9e1; color: white; }
+.btn-green { background: #82b366; color: white; }
+.btn-orange { background: #e6a26c; color: white; }
+
+.lines span {
+    display: block;
+    height: 4px;
+    width: 80%;
+    background: #eee;
+    margin: 4px auto;
+    border-radius: 2px;
+}
+
+.placeholder-icon {
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 50%;
 }
