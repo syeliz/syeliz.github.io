@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Position - Duyuru Kartı</title>
+    <title>Duyuru Kartı</title>
     <style>
-        /* Genel Ayarlar */
         html, body {
             height: 100%;
             margin: 0;
@@ -17,7 +16,7 @@
             background-color: #f0f2f5;
             display: flex;
             flex-direction: column;
-            min-height: 1500px; /* Scroll için yükseklik bırakıldı */
+            min-height: 1200px;
         }
 
         header {
@@ -27,10 +26,9 @@
             text-align: center;
         }
 
-        /* --- Fixed Öğe --- */
         .fixed-helper {
             position: fixed;
-            bottom: 80px; /* Footer'ın üzerinde kalması için yükseltildi */
+            bottom: 80px;
             right: 20px;
             background-color: #ff4757;
             color: white;
@@ -46,7 +44,6 @@
             transform: scale(1.1);
         }
 
-        /* --- Relative Kapsayıcı (Kart) --- */
         .main-container {
             position: relative;
             width: 500px;
@@ -58,7 +55,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        /* --- Absolute Öğeler --- */
         .badge-free {
             position: absolute;
             top: 15px;
@@ -98,7 +94,7 @@
             right: 15px;
             background-color: #ffebee;
             padding: 5px 10px;
-            z-index: 5; /* z-index kullanımı */
+            z-index: 5;
         }
 
         @keyframes pulse {
@@ -107,9 +103,8 @@
             100% { transform: scale(1); }
         }
 
-        /* --- Sayfa Altındaki Footer --- */
         footer {
-            margin-top: auto; /* Sayfa içeriği az olsa bile en alta iter */
+            margin-top: auto;
             width: 100%;
             text-align: center;
             padding: 20px 0;
@@ -129,7 +124,7 @@
 <body>
 
     <header>
-        <h1>Laboratuvar 5: CSS Position</h1>
+        <h1>ab 5: CSS Position - Duyuru Kartı</h1>
     </header>
 
     <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
@@ -150,7 +145,7 @@
     <div class="fixed-helper">?</div>
 
     <footer>
-        2026-LAB Position Örnek Çalışması [cite: 51]
+        2026-LAB Position Örnek Çalışması
     </footer>
 
 </body>
