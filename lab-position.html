@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Position - Duyuru Kartı</title>
+    <style>
+        /* Genel Ayarlar */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            height: 2000px; /* Scroll yapılabilmesi için yükseklik verildi */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        /* [cite: 12, 26, 31, 39] - Fixed Öğe */
+        .fixed-helper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4757;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: help; /*  - Cursor değişimi */
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease; /* [cite: 14, 41] - Transition */
+        }
+
+        .fixed-helper:hover {
+            transform: scale(1.1) rotate(10deg); /* [cite: 15] - Hover animasyonu */
+        }
+
+        /* [cite: 10, 37] - Relative Kapsayıcı */
+        .main-container {
+            position: relative;
+            width: 500px;
+            height: 350px;
+            background-color: #e0e0ff;
+            margin: 100px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Kart İçeriği */
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .card-text {
+            color: #444;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+
+        /* [cite: 11, 25, 38] - Absolute Öğeler */
+        .badge-free {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #fff9c4;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer; /*  - Cursor değişimi */
+        }
+
+        .badge-date {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e8f5e9;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer; /*  - Cursor değişimi */
+        }
+
+        .location-info {
+            position: absolute;
+            bottom: 80px;
+            right: 30px;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /*  - z-index kullanımı */
+            z-index: 10; 
+        }
+
+        /* [cite: 11, 18] - Üst üste binen absolute öğe */
+        .last-call {
+            position: absolute;
+            bottom: 20px;
+            right: 15px;
+            background-color: #ffebee;
+            padding: 5px 10px;
+            font-size: 14px;
+            z-index: 5; /* Location info altında kalır */
+        }
+
+        /* Animasyonlar */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .badge-free:active {
+            background-color: #fbc02d; /* [cite: 16] - Active efekti */
+        }
+
+        .location-info {
+            animation: pulse 2s infinite; /* [cite: 17, 41] - Keyframes animasyonu */
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ddd;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Laboratuvar 5: CSS Position</h1>
+    </header>
+
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+
+    <div class="main-container">
+        
+        <div class="badge-free">Ücretsiz</div>
+        <div class="badge-date">24 Nisan</div>
+
+        <div class="card-title">Teknoloji Topluluğu Etkinliği</div>
+        <p class="card-text">
+            Bu örnek sayfada amaç; CSS position özelliklerini kullanarak tek bir duyuru kartı üzerinde 
+            relative, absolute, fixed, z-index, hover, cursor ve animasyon mantığını göstermektir.
+        </p>
+
+        <div class="location-info">Konum: Konferans Salonu</div>
+        <div class="last-call">Son Kayıt</div>
+
+        <footer>
+            2026-LAB Position Örnek Çalışması
+        </footer>
+    </div>
+
+    <div class="fixed-helper">
+        ?
+    </div>
+
+</body>
+</html>
