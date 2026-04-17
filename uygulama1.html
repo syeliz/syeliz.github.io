@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Uygulama1</title>
+    <link rel="stylesheet" href="uyg1.css">
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" id="adSoyad" placeholder="Ad Soyad">
+        <input type="number" id="vizeNotu" placeholder="Vize Notu">
+        <input type="number" id="finalNotu" placeholder="Final Notu">
+        
+        <button onclick="hesapla()">Hesapla</button>
+
+        <div id="sonucPaneli" class="result-box" style="display:none;">
+            <h3 id="resAd"></h3>
+            <p>Ortalama: <span id="resOrt"></span></p>
+            <p>Harf Notu: <span id="resHarf"></span></p>
+            <p>Durum: <span id="resDurum"></span></p>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
