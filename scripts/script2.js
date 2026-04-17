@@ -12,7 +12,7 @@ function birimHesapla() {
 
     switch (tip) {
         case "c2f":
-            sonuc = (deger * 9 / 5) + 32; [cite: 22]
+            sonuc = (deger * 9 / 5) + 32;
             sonucGosterge.innerText = sonuc.toFixed(0); 
             break;
             
@@ -22,7 +22,7 @@ function birimHesapla() {
             break;
 
         case "k2g":
-            sonuc = deger * 1000; [cite: 29]
+            sonuc = deger * 1000;
             sonucGosterge.innerText = sonuc.toLocaleString('tr-TR'); 
             break;
     }
