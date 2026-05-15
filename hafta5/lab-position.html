@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duyuru Kartı</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 1200px;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .fixed-helper {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: #ff4757;
+            color: white;
+            padding: 15px;
+            cursor: help;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .fixed-helper:hover {
+            transform: scale(1.1);
+        }
+
+        .main-container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: #c5e2e8;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .badge-free {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #f5e97d;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .badge-date {
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            background-color: #bee8c1;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .location-info {
+            position: absolute;
+            bottom: 60px;
+            right: 30px;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 10; 
+            animation: pulse 2s infinite;
+        }
+
+        .last-call {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e81031;
+            padding: 5px 10px;
+            z-index: 5;
+        }
+
+        .last-call:hover {
+            background-color: #b30c26;
+            transform: translateY(-2px);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(232, 16, 49, 0.3);
+        }
+
+        .last-call:active {
+            transform: translateY(0);
+            background-color: #8a091d;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .back-link {
+            display: block;
+            text-align: left;
+            margin-top: 20px;
+            margin-left: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Lab 5: CSS Position - Duyuru Kartı</h1>
+    </header>
+
+    <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+
+    <div class="main-container">
+        <div class="badge-free">Ücretsiz</div>
+        <div class="badge-date">24 Nisan</div>
+
+        <div style="font-size: 22px; font-weight: bold; margin-top: 40px;">Teknoloji Topluluğu Etkinliği</div>
+        <p style="color: #444; line-height: 1.5; margin-top: 15px;">
+            Bu örnek sayfada amaç, CSS position özelliklerini kullanarak duyuru kartı üzerinde relative, absolute ve z-index mantığını göstermektir.
+        </p>
+
+        <div class="location-info">Konum: Konferans Salonu</div>
+        <div class="last-call">Son Kayıt</div>
+    </div>
+
+    <div class="fixed-helper">Yardımcı Menü</div>
+
+    <footer>
+        2026-Lab 5 Position Örnek Çalışması
+    </footer>
+
+</body>
+</html>
