@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Uygulama 2</title>
+    <link rel="stylesheet" href="styles/uyg2.css">
+</head>
+<body>
+
+    <div class="converter-card">
+        <h2>Birim Dönüştürücü</h2>
+        
+        <label>Değer Giriniz:</label>
+        <input type="number" id="birimDeger" placeholder="Örn: 50">
+
+        <label>Dönüşüm Tipi:</label> 
+        <select id="donusumTipi">
+            <option value="c2f">Celsius -> Fahrenheit</option>
+            <option value="m2k">Metre -> Kilometre</option>
+            <option value="k2g">Kilogram -> Gram</option>
+        </select>
+
+        <button onclick="birimHesapla()">Hesapla</button>
+
+        <div id="sonucAlani" class="result-box">
+            Sonuç: <span id="sonucDeger">-</span>
+        </div>
+    </div>
+
+    <script src="scripts/script2.js"></script>
+</body>
+</html>
